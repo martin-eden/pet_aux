@@ -1,0 +1,131 @@
+---
+Getting World of Warcraft auctions data
+
+1. Get a valid realm names
+
+  (
+    To get it you may register at https://dev.battle.net to get
+    you own API key and password. Further interaction requires that
+    key.
+  )
+
+  Realm status (and server names):
+
+  https://eu.api.battle.net/wow/realm/status?locale=en_GB&apikey=s8gmc6zepuh5ncjky5wzquwxzkx9zx2f
+
+2. Get file
+
+  http://eu.battle.net/api/wow/auction/data/<server_name>
+
+  (
+    This way may be forbidden. They are afraid of anonymous.
+    In that case use
+
+    https://eu.api.battle.net/wow/auction/data/medivh?locale=en_GB&apikey=s8gmc6zepuh5ncjky5wzquwxzkx9zx2f
+  )
+
+  This is JSON like
+    {
+      "files": [
+        {
+          "url": "http://auction-api-eu.worldofwarcraft.com/auction-data/b6a53e4bbf5d5f7b78b69a419b5d4970/auctions.json",
+          "lastModified": 1454101069000
+        }
+      ]
+    }
+
+3. Extract files[1].url from this JSON.
+
+  You may use "suggest_filename.lua" script for this. For that file
+  saved from step (2) must ends with <servername>. Call
+
+  lua suggest_filename.lua <that_file_name>
+
+  It should return two words: download link and fiel name.
+
+4. Download file from extracted link.
+
+---
+Getting pet info from auctions
+
+1. For pets auction file contain records like
+    {
+    c "auc": ...,
+      "item": 82800,
+    c "owner": "...",
+    c "ownerRealm": "...",
+      "bid": 17100000,
+      "buyout": 18000000,
+      "quantity": 1,
+      "timeLeft": "VERY_LONG",
+      "rand": 0,
+    c "seed": ...,
+      "context": 0,
+      "modifiers": [
+        {
+          "type": 3,
+          "value": 120
+        },
+        {
+          "type": 4,
+          "value": 33554445
+        },
+        {
+          "type": 5,
+          "value": 25
+        }
+      ],
+    * "petSpeciesId": 120,
+    * "petBreedId": 13,
+    * "petLevel": 25,
+    * "petQualityId": 2
+    }
+
+  To get pet name, extract "petSpeciesId".
+
+2. Pet catalogue available at (you need API key)
+
+  https://eu.api.battle.net/wow/pet/?locale=en_GB&apikey=s8gmc6zepuh5ncjky5wzquwxzkx9zx2f
+
+  It's JSON like
+    {
+      "pets": [
+        {
+          "canBattle": true,
+          "creatureId": 45128,
+        * "name": "Crawling Claw",
+          "family": "undead",
+          "icon": "inv_offhand_stratholme_a_02",
+          "qualityId": 4,
+          "stats": {
+        *   "speciesId": 264,
+            "breedId": 3,
+            "petQualityId": 1,
+            "level": 1,
+            "health": 150,
+            "power": 10,
+            "speed": 8
+          },
+          "strongAgainst": [
+            "humanoid"
+          ],
+          "typeId": 3,
+          "weakAgainst": [
+            "water"
+          ]
+        },
+    ...
+      ]
+    }
+
+  Map "petSpeciesId" from (1) to "pets[i].stats.speciesId" and then to
+  "pets[i].name".
+
+---
+Useful links:
+
+  https://dev.battle.net/io-docs
+
+---
+Base written approx 2013-09
+Picked up 2016-01-31
