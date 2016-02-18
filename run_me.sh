@@ -78,7 +78,8 @@ while read servname; do
   else
     echo "Getting link to realm '$servname'."
     rm --force ../$link_file
-    auc_link_url="http://eu.battle.net/api/wow/auction/data/$servname"
+    # auc_link_url="http://eu.battle.net/api/wow/auction/data/$servname"
+    auc_link_url="https://eu.api.battle.net/wow/auction/data/$servname?locale=en_GB&apikey=$api_key"
     wget \
       --no-clobber \
       --output-document=../$link_file \
@@ -106,3 +107,6 @@ done
 cd ..
 rm --force $results_tmp
 echo "Results are in '$results'"
+
+# cd ./lua
+# lua ./display_results.lua ../results.lua 3 | egrep --after-context=3 "\(1\)\s+Ford"

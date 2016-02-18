@@ -1,6 +1,6 @@
 --[[
   Status: stable, optimizing
-  Last mod.: 2013-07-12
+  Last mod.: 2016-02-16
 ]]
 
 function quote(s)
@@ -161,7 +161,11 @@ end
 
 
 function table_to_array(t, f)
-  f = f or function (a, b) return compare_values(a.key, b.key) end
+  f =
+    f or
+    function(a, b)
+      return compare_values(a.key, b.key)
+    end
   local r = {}
   for k, v in pairs(t) do
     r[#r + 1] = {key = k, value = v}
@@ -563,5 +567,6 @@ end
 
 --[[
 2013-07-12
+2016-02-16
 ]]
 

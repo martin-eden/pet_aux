@@ -6,8 +6,8 @@ local auc_list = json_as_table(json_auc_list)
 
 local config_name = arg[2]
 local config_realms, config_pets = dofile(config_name)
-local list_all_pets = false
-if (#config_pets == 0) then
+local list_all_pets
+if not config_pets then
   list_all_pets = true
 else
   for i = 1, #config_pets do

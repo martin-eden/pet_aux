@@ -15,14 +15,7 @@ Getting World of Warcraft auctions data
 
 2. Get file
 
-  http://eu.battle.net/api/wow/auction/data/<server_name>
-
-  (
-    This way may be forbidden. They are afraid of anonymous.
-    In that case use
-
-    https://eu.api.battle.net/wow/auction/data/medivh?locale=en_GB&apikey=s8gmc6zepuh5ncjky5wzquwxzkx9zx2f
-  )
+  https://eu.api.battle.net/wow/auction/data/ <servername> ?locale=en_GB&apikey=s8gmc6zepuh5ncjky5wzquwxzkx9zx2f
 
   This is JSON like
     {
@@ -44,6 +37,17 @@ Getting World of Warcraft auctions data
   It should return two words: download link and fiel name.
 
 4. Download file from extracted link.
+
+
+Note.
+  To the recent days (~2016-02-07) there was a ability to get auction
+  data completely anonymous. Link to step (2) was
+
+  "http://eu.battle.net/api/wow/auction/data/" <server_name>
+
+  But today (2016-02-11) previous request returns 403/Forbidden.
+
+  Anyway you still able to use mentioned api key.
 
 ---
 Getting pet info from auctions
