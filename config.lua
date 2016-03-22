@@ -4,9 +4,9 @@ local realms =
     -- 'Magtheridon',
     'Chamber of Aspects',
     "Blade's Edge",
-    -- 'Ravencrest',
-    'Outland',
-    'Fordragon',
+    'Ravencrest',
+    -- 'Outland',
+    -- 'Fordragon',
     -- 'Gordunni',
     -- 'Blackscar',
     -- 'Galakrond',
@@ -266,64 +266,104 @@ local pets_to_levelup =
 local pets =
   {
     -- [[ general trade
-    'Ammen Vale Lashling', -- .
-    'Ashstone Core', -- ****
-    'Cinder Pup', -- . ****
-    -- 'Corefire Imp', -- * good seller, concurrency
-    'Dandelion Frolicker', -- ..** good seller
-    -- 'Dark Whelpling', -- ** hard to sell
-    'Darkmoon Cub', -- .. ***
-    'Darkmoon Hatchling', -- ...*
-    'Darkmoon Monkey', -- ...***
-    'Darkmoon Tonk', -- .. *****
-    'Darkmoon Turtle', -- ..*******
-    'Darkmoon Zeppelin', -- .....*******
-    'Death Talon Whelpguard', -- .... *** ok seller
-    'Direhorn Runt', -- ..................*********
-    'Disgusting Oozeling', -- . 5k
+    -- 'Ammen Vale Lashling', --
+    'Aqua Strider', --
+    'Ashstone Core', --**
+    'Bone Serpent', --
+    'Cinder Pup', --
+    'Corefire Imp', -- good seller, concurrency
+    -- 'Chuck', --selled very long (4k)
+    'Chrominius', --ok seller
+    -- 'Crimson Spore', --
+    'Dandelion Frolicker', -- good seller
+    -- 'Dark Whelpling', -- hard to sell
+    -- 'Darkmoon Cub', --
+    -- 'Darkmoon Hatchling', --
+    -- 'Darkmoon Monkey', --
+    -- 'Darkmoon Tonk', --
+    'Darkmoon Turtle', --
+    -- 'Darkmoon Zeppelin', --
+    'Death Talon Whelpguard', --** ok seller
+    'Direhorn Runt', --*** ok seller
+    -- 'Disgusting Oozeling', -- 5k
+    'Doom Bloom', --*
+    -- 'Enchanted Broom', --
+    'Elementium Geode', --
     -- 'Eye of Observation', -- good seller
-    "Father Winter's Helper", -- .. ****
-    'Fishy', -- . ****
-    'Fox Kit', -- ... bad seller, concurrency
-    'Frigid Frostling', -- ..
-    'Enchanted Broom', -- .. concurrency
-    'Gilnean Raven', -- ** hard to sell
-    'Harbinger of Flame', -- ..  too small profit
-    'Ikky', -- . ******
-    'Iron Starlette', -- .. ***
-    'Jade Owl', -- ..
+    'Everbloom Peachick', --**
+    "Father Winter's Helper", --
+    -- 'Fishy', --
+    -- 'Fox Kit', -- bad seller, concurrency
+    -- 'Fragment of Desire', --
+    -- 'Fragment of Suffering', --
+    -- 'Frigid Frostling', --
+    -- 'Enchanted Broom', -- concurrency
+    'Ghastly Kid', --*
+    -- 'Gilnean Raven', -- hard to sell
+    -- 'Giant Bone Spider', --selled ok
+    'Harbinger of Flame', -- too small profit
+    -- 'Ikky', --
+    'Iron Starlette', -- ok seller
+    -- 'Jade Owl', --
     -- 'Land Shark', -- selled quick
-    'Lesser Voidcaller', -- .. ** too expensive to buy
-    'Lifelike Mechanical Frostboar', -- ..
-    "Lil' Bling", -- .... **
-    'Macabre Marionette', -- ....... ***
-    'Mechanical Axebeak', -- .. **** too small profit
-    'Mechanical Pandaren Dragonling', -- ... *
-    'Mojo', -- .. *
-    'Netherspawn, Spawn of Netherspawn', -- .. *** concurrency
+    -- 'Lesser Voidcaller', -- too expensive to buy
+    -- 'Lifelike Mechanical Frostboar', --
+    'Leviathan Hatchling', --*
+    "Lil' Bad Wolf", --**
+    -- "Lil' Bling", --
+    'Macabre Marionette', --
+    -- 'Magic Lamp', --
+    -- 'Mechanical Axebeak', -- too small profit
+    -- 'Mechanical Pandaren Dragonling', --
+    -- 'Mojo', --
+    'Netherspawn, Spawn of Netherspawn', -- concurrency
+    -- 'Nether Ray Fry', --
     -- 'Nightmare bell', -- selled quick
-    'Pint-Sized Pink Pachyderm', -- .. ** too expensive to buy
-    'Razzashi Hatchling', -- ** too rare to trade
-    'Ruby Droplet', -- . 14k concurrency
+    -- 'Orange Tabby Cat', -- no demand
+    -- 'Ore Eater', --
+    -- 'Peddlefeet', --
+    'Phoenix Hawk Hatchling', --*
+    'Puddle Terror',
+    -- 'Pint-Sized Pink Pachyderm', -- ok seller, too expensive to buy
+    'Razzashi Hatchling', -- too rare to trade
+    -- 'Ruby Droplet', -- 14k concurrency
     -- 'Savage Cub', -- good seller
-    "Sen'jin Fetish", --..
-    'Snowshoe Rabbit', -- .. ****
-    "Spawn of G'nathus", -- ........ ** too expensive to buy
-    'Speedy', -- ...
-    'Spectral Porcupette', -- .... *
-    'Stitched Pup', -- ..... ***** too small profit
-    'Sunreaver Micro-Sentry', -- . ** too small profit
-    'Tiny Red Carp', -- .
-    'Vengeful Porcupette', -- ....... *
-    'Voodoo Figurine', -- .... ****
+    -- 'Sea Pony', --
+    -- "Sen'jin Fetish", --
+    'Sinister Squashling', --****
+    -- 'Shard of Cyrukh', --
+    -- 'Sky-Bo', --
+    -- "Sentinel's Companion", --
+    'Silver Dragonhawk Hatchling', --
+    'Sister of Temptation', -- **
+    'Snowshoe Rabbit', --
+    -- 'Smolderweb Hatchling', --
+    -- "Spawn of G'nathus", -- too expensive to buy
+    -- 'Speedy', --selled for 1.8k
+    -- 'Spectral Porcupette', --
+    'Stitched Pup', --** good seller, too small profit
+    -- 'Stonegrinder', --selled ok
+    'Sunblade Micro-Defender', --*
+    -- 'Sunreaver Micro-Sentry', -- too small profit
+    -- 'Teroclaw Hatchling', --
+    -- 'Tiny Red Carp', --
+    'Toxic Wasteling', --***
+    'Untamed Hatchling', --**
+    -- 'Vengeful Porcupette', --
+    'Voodoo Figurine', --**
     -- 'Widget the Departed', -- ok seller
-    'Winter Reindeer', -- ***
-    "Winter's Little Helper", -- ... *****
-    'Zandalari Anklerender', -- ............***** пяткогрыз
-    'Zandalari Footslasher', -- . *** пяткохлыстик
-    'Zandalari Kneebiter', -- ......*** ногокус
-    'Zomstrok', -- .***
+    -- 'Winter Reindeer', --
+    "Winter's Little Helper", --
+    'Worg Pup', --**
+    -- 'Wretched Servant', --
+    'Young Talbuk', --*** selling ok
+    -- 'Zandalari Anklerender', -- stable seller, пяткогрыз
+    'Zandalari Footslasher', --** stable seller, пяткохлыстик
+    -- 'Zandalari Kneebiter', -- stable seller, ногокус
+    'Zandalari Toenibbler', --*****
+    -- 'Zomstrok', --
+    -- 'Zangar Spore', --
     --]]
   }
 
-return realms, pets
+return realms, nil

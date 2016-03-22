@@ -28,11 +28,13 @@ for pet_name, servers in sorted_pairs(pets) do
     function(bracket)
       local num_processed = 0
       for server_name, bracket_prices in sorted_pairs(servers, generate_compare_function(bracket)) do
-        local price = bracket_prices[bracket] or '--'
-        results[#results + 1] = {pet_name, bracket, '(' .. num_processed + 1 .. ')', server_name, price}
-        num_processed = num_processed + 1
-        if (num_processed > context_length) then
-          break
+        local price = bracket_prices[bracket]
+        if price then
+          results[#results + 1] = {pet_name, bracket, '(' .. num_processed + 1 .. ')', server_name, price}
+          num_processed = num_processed + 1
+          if (num_processed > context_length) then
+            break
+          end
         end
       end
     end

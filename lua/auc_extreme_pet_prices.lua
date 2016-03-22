@@ -46,7 +46,7 @@ for i = 1, #auc_list.auctions do
     local buyout = math.ceil(rec.buyout / 1e4)
     local pet_id = rec.petSpeciesId
     local pet_name = pet_by_id[pet_id].name
-    if config_pets[pet_name] or list_all_pets then
+    if list_all_pets or config_pets[pet_name] then
       local pet_breed = rec.petBreedId
       local level = rec.petLevel
 
