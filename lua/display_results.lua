@@ -1,4 +1,4 @@
-require('common')
+require('base_structs.#base')
 
 local results_file = arg[1]
 if not results_file then
@@ -7,7 +7,7 @@ if not results_file then
 end
 local context_length = tonumber(arg[2]) or 2
 local pets = dofile(results_file)
-assert(is_table(pets))
+assert_table(pets)
 
 -- <pet> <bracket> [<quality>] <*inner_place> <server> <price>
 -- *inner_place is some marker to convenient grepping cheapest pets
@@ -22,6 +22,7 @@ local generate_compare_function =
       end
   end
 
+local sorted_pairs = request('base_structs.table.ordered_pass')
 local results = {}
 for pet_name, servers in sorted_pairs(pets) do
   local fill_results =
@@ -81,7 +82,7 @@ for i = 1, #results do
     results[i][j] = string.format(format_string, results[i][j])
   end
 end
---not it's ok
+--now it's ok
 local field_separator = '\t'
 local record_separator = '\n'
 for i = 1, #results do

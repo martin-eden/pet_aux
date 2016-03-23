@@ -1,4 +1,7 @@
-require('common')
+require('base_structs.#base')
+
+local file_as_string = request('base_structs.file.as_string')
+local json_as_table = request('base_structs.parse.json')
 
 local json_auc_list_filename = arg[1]
 local json_auc_list = file_as_string(json_auc_list_filename)
@@ -70,4 +73,8 @@ for i = 1, #auc_list.auctions do
   end
 end
 
-print('return ' .. dump_structure(results))
+local dfs = request('base_structs.graph.dfs_pass')
+local lua_printer = request('base_structs.graph.dfs_pass.printers.lua')
+local result = dfs(results, nil, lua_printer)
+
+print(result)
