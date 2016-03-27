@@ -43,8 +43,30 @@ for i = 1, #config_realms do
   end
 end
 
+
+local add_pet =
+  function(pet_name, category, buyout)
+    local buyout = math.ceil(buyout / 1e4)
+    results[pet_name] = results[pet_name] or {}
+    results[pet_name][realm_name] = results[pet_name][realm_name] or {}
+    results[pet_name][realm_name][category] =
+      results[pet_name][realm_name][category] or
+      buyout
+    if (buyout < results[pet_name][realm_name][category]) then
+      results[pet_name][realm_name][category] = buyout
+    end
+  end
+
+local category_low = '1..24'
+local category_high = '25'
+local battle_stone_id = 92741
+local battle_stone_name = 'Flawless Battle-Stone'
 for i = 1, #auc_list.auctions do
   local rec = auc_list.auctions[i]
+  if (rec.item == battle_stone_id) then
+    add_pet(battle_stone_name, category_low, rec.buyout)
+    add_pet(battle_stone_name, category_high, rec.buyout)
+  end
   if rec.petSpeciesId and rec.buyout > 0 then
     local buyout = math.ceil(rec.buyout / 1e4)
     local pet_id = rec.petSpeciesId
@@ -55,20 +77,12 @@ for i = 1, #auc_list.auctions do
 
       local category
       if (level < 25) then
-        category = '1..24'
+        category = category_low
       else
-        category = '25'
+        category = category_high
       end
 
-      results[pet_name] = results[pet_name] or {}
-      results[pet_name][realm_name] = results[pet_name][realm_name] or {}
-      results[pet_name][realm_name][category] =
-        results[pet_name][realm_name][category] or
-        buyout
-      --min buyout: results[pet_name][realm_name][category]
-      if (buyout < results[pet_name][realm_name][category]) then
-        results[pet_name][realm_name][category] = buyout
-      end
+      add_pet(pet_name, category, rec.buyout)
     end
   end
 end
