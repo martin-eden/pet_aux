@@ -25,7 +25,7 @@
 require('base_structs.#base')
 
 local file_as_string = request('base_structs.file.as_string')
-local json_as_table = request('base_structs.parse.json')
+local json_as_table = request('base_structs.load_from.json')
 
 local json_link = arg[1]
 local servername = string.match(json_link, '.*%/([%w%-]+)') or json_link

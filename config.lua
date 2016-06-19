@@ -1,10 +1,10 @@
 local realms =
   {
-    'Saurfang',
-    -- 'Magtheridon',
-    'Chamber of Aspects',
-    "Blade's Edge",
     'Ravencrest',
+    'Saurfang',
+    "Blade's Edge",
+    'Chamber of Aspects',
+    -- 'Magtheridon',
     -- 'Outland',
     -- 'Fordragon',
     -- 'Gordunni',
@@ -284,13 +284,13 @@ local pets =
     'Darkmoon Turtle', --
     -- 'Darkmoon Zeppelin', --
     'Death Talon Whelpguard', --** ok seller
-    'Direhorn Runt', --*** ok seller
+    'Direhorn Runt', --** ok seller
     -- 'Disgusting Oozeling', -- 5k
     'Doom Bloom', --*
     -- 'Enchanted Broom', --
     'Elementium Geode', --
     -- 'Eye of Observation', -- good seller
-    'Everbloom Peachick', --**
+    'Everbloom Peachick', --*
     "Father Winter's Helper", --
     -- 'Fishy', --
     -- 'Fox Kit', -- bad seller, concurrency
@@ -298,7 +298,7 @@ local pets =
     -- 'Fragment of Suffering', --
     -- 'Frigid Frostling', --
     -- 'Enchanted Broom', -- concurrency
-    'Ghastly Kid', --*
+    -- 'Ghastly Kid', --sells ok
     -- 'Gilnean Raven', -- hard to sell
     -- 'Giant Bone Spider', --selled ok
     'Harbinger of Flame', -- too small profit
@@ -309,7 +309,7 @@ local pets =
     -- 'Lesser Voidcaller', -- too expensive to buy
     -- 'Lifelike Mechanical Frostboar', --
     'Leviathan Hatchling', --*
-    "Lil' Bad Wolf", --**
+    "Lil' Bad Wolf", --*
     -- "Lil' Bling", --
     'Macabre Marionette', --
     -- 'Magic Lamp', --
@@ -358,7 +358,7 @@ local pets =
     -- 'Wretched Servant', --
     'Young Talbuk', --*** selling ok
     -- 'Zandalari Anklerender', -- stable seller, пяткогрыз
-    'Zandalari Footslasher', --** stable seller, пяткохлыстик
+    'Zandalari Footslasher', --* stable seller, пяткохлыстик
     -- 'Zandalari Kneebiter', -- stable seller, ногокус
     'Zandalari Toenibbler', --*****
     -- 'Zomstrok', --
