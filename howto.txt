@@ -34,9 +34,9 @@ Getting World of Warcraft auctions data
 
   lua suggest_filename.lua <that_file_name>
 
-  It should return two words: download link and fiel name.
+  It should return two words: <download_link> and <file_name>.
 
-4. Download file from extracted link.
+4. Download file from <download_link>.
 
 
 Note.
@@ -47,12 +47,12 @@ Note.
 
   But today (2016-02-11) previous request returns 403/Forbidden.
 
-  Anyway you still able to use mentioned api key.
+  Anyway you are still able to use mentioned api key.
 
 ---
 Getting pet info from auctions
 
-1. For pets auction file contain records like
+1. For pet lots auction file contain records like
     {
     c "auc": ...,
       "item": 82800,
@@ -131,5 +131,5 @@ Useful links:
   https://dev.battle.net/io-docs
 
 ---
-Base written approx 2013-09
+Base code written approx 2013-09
 Picked up 2016-01-31

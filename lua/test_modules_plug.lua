@@ -1,6 +1,6 @@
-require('base_structs.#base')
+require('workshop.base')
 print(type(is_number))
 
-local print_table = request('base_structs.debug.print_table')
-print(type(print_table))
--- print_table(_G)
+local table_to_str = request('workshop.string.tostring_any')
+-- print(type(table_to_str))
+print(table_to_str(_G))

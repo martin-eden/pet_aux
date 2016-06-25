@@ -1,4 +1,4 @@
-require('base_structs.#base')
+require('workshop.base')
 
 local results_file = arg[1]
 if not results_file then
@@ -22,7 +22,7 @@ local generate_compare_function =
       end
   end
 
-local sorted_pairs = request('base_structs.table.ordered_pass')
+local sorted_pairs = request('workshop.table.ordered_pass')
 local results = {}
 for pet_name, servers in sorted_pairs(pets) do
   local fill_results =
@@ -84,9 +84,9 @@ for i = 1, #results do
 end
 --now it's ok
 local field_separator = '\t'
-local record_separator = '\n'
 for i = 1, #results do
   results[i] = table.concat(results[i], field_separator)
 end
+local record_separator = '\n'
 results = table.concat(results, record_separator)
 print(results)
