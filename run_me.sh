@@ -21,6 +21,7 @@ then
 fi
 
 set -e
+mkdir -p ./data
 
 # 1.
 ## Get realms
