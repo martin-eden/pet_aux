@@ -8,7 +8,7 @@
 # 6. print result
 
 # 0.
-api_key="s8gmc6zepuh5ncjky5wzquwxzkx9zx2f"
+api_key="p8sg9fnpz5sh859urt92vaanbc6ztmj2"
 locale="en_GB"
 config="./config.lua"
 results="./results.lua"
@@ -19,6 +19,8 @@ then
   echo "Previously auctions used. No auctions data will be downloaded."
   use_cache=true
 fi
+
+set -e
 
 # 1.
 ## Get realms

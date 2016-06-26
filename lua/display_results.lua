@@ -2,7 +2,7 @@ require('workshop.base')
 
 local results_file = arg[1]
 if not results_file then
-  print('Usage: <lua_file_fith_results> [<context_length>]')
+  print('Usage: <lua_file_with_results> [<context_length>]')
   return
 end
 local context_length = tonumber(arg[2]) or 2
