@@ -69,8 +69,11 @@ for i = 1, #auc_list.auctions do
   if rec.petSpeciesId and rec.buyout > 0 then
     local buyout = math.ceil(rec.buyout / 1e4)
     local pet_id = rec.petSpeciesId
-    local pet_name = pet_by_id[pet_id].name
-    if list_all_pets or config_pets[pet_name] then
+    local pet_name = pet_by_id[pet_id] and pet_by_id[pet_id].name
+    if not pet_name then
+      io.stderr:write(('Not found pet name for id "%d". Skipped.\n'):format(pet_id))
+    end
+    if pet_name and (list_all_pets or config_pets[pet_name]) then
       local pet_breed = rec.petBreedId
       local level = rec.petLevel
 
