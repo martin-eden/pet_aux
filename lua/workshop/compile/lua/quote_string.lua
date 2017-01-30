@@ -1,13 +1,13 @@
-local quote_linear = request('quote_linear')
-local quote_intact = request('quote_intact')
+local quote_linear = request('quote_string.linear')
+local quote_intact = request('quote_string.intact')
 
-local content_funcs = request('content_attributes')
+local content_funcs = request('^.^.string.content_attributes')
 local has_control_chars = content_funcs.has_control_chars
 local has_backslashes = content_funcs.has_backslashes
 local has_single_quotes = content_funcs.has_single_quotes
 local has_double_quotes = content_funcs.has_double_quotes
 
-local smart_quote =
+return
   function(s)
     assert_string(s)
     local quote_func
@@ -27,5 +27,3 @@ local smart_quote =
     local result = quote_func(s)
     return result
   end
-
-return smart_quote

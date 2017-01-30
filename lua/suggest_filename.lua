@@ -25,7 +25,7 @@
 require('workshop.base')
 
 local file_as_string = request('workshop.file.as_string')
-local json_as_table = request('workshop.load_from.json')
+local json_as_table = request('workshop.load_from.json.qd')
 
 local json_link = arg[1]
 local servername = string.match(json_link, '.*%/([%w%-]+)') or json_link

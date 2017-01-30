@@ -1,7 +1,7 @@
 require('workshop.base')
 
 local file_as_string = request('workshop.file.as_string')
-local json_as_table = request('workshop.load_from.json')
+local json_as_table = request('workshop.load_from.json.qd')
 
 local json_realms_list_filename = arg[1]
 local json_realms_list = file_as_string(json_realms_list_filename)
@@ -14,5 +14,5 @@ for i = 1, #realms_list.realms do
 end
 table.sort(results, function(a, b) return a.slug < b.slug end)
 
-local table_to_str = request('workshop.save_to.table_to_lua_code')
+local table_to_str = request('workshop.save_to.lua_table')
 print(table_to_str(results))

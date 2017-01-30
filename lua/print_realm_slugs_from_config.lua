@@ -1,3 +1,5 @@
+require('workshop.base')
+
 local config_name = arg[1]
 local realms_config = dofile(config_name)
 if not realms_config then

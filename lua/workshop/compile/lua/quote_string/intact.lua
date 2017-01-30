@@ -1,10 +1,10 @@
-local long_quote_pattern = '%[(=*)%['
+local long_quote_pattern = request('^.^.^.parse.lua.long_quote_pattern').start
 
-local quote_intact =
+return
   function(s)
     assert_string(s)
 
-    local used_quote_lengths --lazy initialisation
+    local used_quote_lengths --lazy initialization
     for capture in s:gmatch(long_quote_pattern) do
       used_quote_lengths = used_quote_lengths or {}
       used_quote_lengths[#capture] = true
@@ -23,8 +23,5 @@ local quote_intact =
     end
 
     local quote_chunk = ('='):rep(min_needed_quote)
-    local result = ('[%s[%s]%s]'):format(quote_chunk, s, quote_chunk)
-    return result
+    return ('[%s[%s]%s]'):format(quote_chunk, s, quote_chunk)
   end
-
-return quote_intact
