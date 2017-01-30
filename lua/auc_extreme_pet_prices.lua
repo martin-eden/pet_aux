@@ -60,6 +60,7 @@ local category_low = '1..24'
 local category_high = '25'
 local battle_stone_id = 92741
 local battle_stone_name = 'Flawless Battle-Stone'
+local missing_pet_idx_complained = {}
 for i = 1, #auc_list.auctions do
   local rec = auc_list.auctions[i]
   if (rec.item == battle_stone_id) then
@@ -70,8 +71,15 @@ for i = 1, #auc_list.auctions do
     local buyout = math.ceil(rec.buyout / 1e4)
     local pet_id = rec.petSpeciesId
     local pet_name = pet_by_id[pet_id] and pet_by_id[pet_id].name
-    if not pet_name then
-      io.stderr:write(('Not found pet name for id "%d". Skipped.\n'):format(pet_id))
+    if
+      not pet_name and
+      not missing_pet_idx_complained[pet_id]
+    then
+      io.stderr:write(
+        ('Not found pet name for id "%d". Probably "species.json" file is outdated.\n'):
+        format(pet_id)
+      )
+      missing_pet_idx_complained[pet_id] = true
     end
     if pet_name and (list_all_pets or config_pets[pet_name]) then
       local pet_breed = rec.petBreedId
