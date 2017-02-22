@@ -7,7 +7,7 @@
 #   process and update current results (with pet list from config)
 # print result
 
-## Set api_key, fiel names and mode
+## Set api_key, field names and mode
 api_key="p8sg9fnpz5sh859urt92vaanbc6ztmj2"
 locale="en_GB"
 
@@ -31,7 +31,9 @@ function get_realms
   if [[ ! -e $realms_json ]]
   then
     echo "Getting realms list..."
-    local realms_url="https://eu.api.battle.net/wow/realm/status?locale=$locale&apikey=$api_key"
+    local realms_url="https://eu.api.battle.net/wow/realm/status?"
+    realms_url+="locale=$locale&"
+    realms_url+="apikey=$api_key"
     wget \
       --no-clobber \
       --output-document=$realms_json \
@@ -64,7 +66,9 @@ function get_species
   if [[ ! -e $species_json ]]
   then
     echo "Getting pet list..."
-    local species_url="https://eu.api.battle.net/wow/pet/?locale=$locale&apikey=$api_key"
+    local species_url="https://eu.api.battle.net/wow/pet/?"
+    species_url+="locale=$locale&"
+    species_url+="apikey=$api_key"
     wget \
       --no-clobber \
       --output-document=$species_json \
@@ -104,7 +108,9 @@ while read servname; do
     echo "Getting link to realm '$servname'."
     rm --force ../$link_file
     # auc_link_url="http://eu.battle.net/api/wow/auction/data/$servname"
-    auc_link_url="https://eu.api.battle.net/wow/auction/data/$servname?locale=en_GB&apikey=$api_key"
+    auc_link_url="https://eu.api.battle.net/wow/auction/data/$servname?"\
+    auc_link_url+="locale=en_GB&"\
+    auc_link_url+="apikey=$api_key"
     wget \
       --no-clobber \
       --output-document=../$link_file \
@@ -126,7 +132,14 @@ while read servname; do
   else
     echo "  File already retrieved. Using it."
   fi
-  lua ./auc_extreme_pet_prices.lua $auc_json ../$config_lua ../$species_lua ../$results_lua > ../$results_tmp
+  echo "  Processing..."
+  lua \
+    ./auc_extreme_pet_prices.lua \
+    $auc_json \
+    ../$config_lua \
+    ../$species_lua \
+    ../$results_lua > \
+    ../$results_tmp
   cat ../$results_tmp > ../$results_lua
 done
 cd ..
