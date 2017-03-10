@@ -2,9 +2,9 @@ This is project from the "gray zone" of World of Warcraft.
 It downloads current auction snapshots for given realms and
 finds minimal prices for given pets on realm. (1)
 
-It was used for lazy crossrealm pet trading.
+It may be used for lazy crossrealm pet trading.
 
-All business-level configuration in "config.lua". (2)
+All business-level configuration is in "config.lua". (2)
 
 Requirements:
   bash
@@ -72,8 +72,8 @@ Happy trading!
   no much need to do it.
 
 [2]
-  "config.lua" is just a lua script which should return two
-  values:
+  "config.lua" is just a lua script which should return table with
+  two fields:
 
     servers (table)
     pet_names (table)
@@ -81,13 +81,15 @@ Happy trading!
   <servers> - array of strings. Each string should be official name
     of realm.
 
-    Example: [[{"Blade's Edge", 'Chamber of Aspects',}]]
+    Example: {"Blade's Edge", 'Chamber of Aspects'}
 
   <pet_names> - array of strings or nil. Each string should be full
     name of pet. If nil is returned then price roster is built for
     all pets on auction.
 
-    Example: [[{'Gusting Grimoire', 'Hippogryph Hatchling',
-      "Landro's Lil' XT",}]]
-
-
+    Example:
+      {
+        'Gusting Grimoire',
+        'Hippogryph Hatchling',
+        "Landro's Lil' XT",
+      }
