@@ -1,12 +1,17 @@
 require('workshop.base')
 
+local file_as_string = request('!.file.as_string')
+local table_from_str = request('!.formats.lua_table.load')
+
 local results_file = arg[1]
 if not results_file then
   print('Usage: <lua_file_with_results> [<context_length>]')
   return
 end
+
 local context_length = tonumber(arg[2]) or 2
-local pets = dofile(results_file)
+
+local pets = table_from_str(file_as_string(results_file))
 assert_table(pets)
 
 -- <pet> <bracket> [<quality>] <*inner_place> <server> <price>
@@ -22,7 +27,7 @@ local generate_compare_function =
       end
   end
 
-local sorted_pairs = request('workshop.table.ordered_pass')
+local sorted_pairs = request('!.table.ordered_pass')
 local results = {}
 for pet_name, servers in sorted_pairs(pets) do
   local fill_results =

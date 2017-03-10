@@ -366,4 +366,8 @@ local pets =
     --]]
   }
 
-return realms, nil
+return
+  {
+    realms = realms,
+    pets = nil,
+  }

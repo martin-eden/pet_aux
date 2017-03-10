@@ -1,25 +1,29 @@
 require('workshop.base')
 
-local file_as_string = request('workshop.file.as_string')
-local json_as_table = request('workshop.load_from.json.qd')
+local file_as_string = request('!.file.as_string')
+local json_as_table = request('!.formats.json.load')
+local table_from_str = request('!.formats.lua_table.load')
 
 local json_auc_list_filename = arg[1]
 local json_auc_list = file_as_string(json_auc_list_filename)
 local auc_list = json_as_table(json_auc_list)
 
 local config_name = arg[2]
-local config_realms, config_pets = dofile(config_name)
+local config = dofile(config_name)
+local used_realms = config.realms
+local used_pets = config.pets
+
 local list_all_pets
-if not config_pets then
+if not used_pets then
   list_all_pets = true
 else
-  for i = 1, #config_pets do
-    config_pets[config_pets[i]] = true
+  for i = 1, #used_pets do
+    used_pets[used_pets[i]] = true
   end
 end
 
 local pet_list_name = arg[3]
-local pet_list = dofile(pet_list_name)
+local pet_list = table_from_str(file_as_string(pet_list_name))
 
 local pet_by_id = {}
 for i = 1, #pet_list do
@@ -28,16 +32,17 @@ for i = 1, #pet_list do
 end
 
 local current_results_name = arg[4]
-local results = dofile(current_results_name)
+local results = table_from_str(file_as_string(current_results_name))
+assert(results)
 
 local realm_name
-for i = 1, #config_realms do
+for i = 1, #used_realms do
   for j = 1, #auc_list.realms do
-    if (auc_list.realms[j].name == config_realms[i]) then
+    if (auc_list.realms[j].name == used_realms[i]) then
       if not realm_name then
-        realm_name = config_realms[i]
+        realm_name = used_realms[i]
       else
-        realm_name = realm_name .. '/' .. config_realms[i]
+        realm_name = realm_name .. '/' .. used_realms[i]
       end
     end
   end
@@ -81,7 +86,7 @@ for i = 1, #auc_list.auctions do
       )
       missing_pet_idx_complained[pet_id] = true
     end
-    if pet_name and (list_all_pets or config_pets[pet_name]) then
+    if pet_name and (list_all_pets or used_pets[pet_name]) then
       local pet_breed = rec.petBreedId
       local level = rec.petLevel
 
@@ -97,5 +102,5 @@ for i = 1, #auc_list.auctions do
   end
 end
 
-local table_to_str = request('workshop.save_to.lua_table')
+local table_to_str = request('!.formats.lua_table.save')
 print(table_to_str(results))

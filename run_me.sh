@@ -96,7 +96,7 @@ prepare_species $species_lua
 
 ## Get auctions and extract species
 rm --force $results_lua
-echo "return {}" > $results_lua
+echo "{}" > $results_lua
 cd ./lua
 lua ./print_realm_slugs_from_config.lua ../$config_lua ../$realms_lua | \
 while read servname; do
