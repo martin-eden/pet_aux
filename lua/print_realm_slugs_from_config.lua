@@ -15,15 +15,9 @@ if not (full_realms_list) then
   error(('Looks like realms file "%s" is not loaded correctly.'):format(realms_name))
 end
 
-local realms = {}
-for i = 1, #full_realms_list do
-  local rec = full_realms_list[i]
-  realms[rec.name] = rec.slug
-end
-
 for i = 1, #used_realms do
   local realm_name = used_realms[i]
-  if realms[realm_name] then
-    print(realms[realm_name])
+  if full_realms_list[realm_name] then
+    print(full_realms_list[realm_name])
   end
 end

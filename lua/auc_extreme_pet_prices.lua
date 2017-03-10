@@ -54,8 +54,7 @@ local add_pet =
     results[pet_name] = results[pet_name] or {}
     results[pet_name][realm_name] = results[pet_name][realm_name] or {}
     results[pet_name][realm_name][category] =
-      results[pet_name][realm_name][category] or
-      buyout
+      results[pet_name][realm_name][category] or buyout
     if (buyout < results[pet_name][realm_name][category]) then
       results[pet_name][realm_name][category] = buyout
     end

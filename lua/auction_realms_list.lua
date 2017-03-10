@@ -10,9 +10,8 @@ local realms_list = json_as_table(json_realms_list)
 local results = {}
 for i = 1, #realms_list.realms do
   local rec = realms_list.realms[i]
-  results[i] = {slug = rec.slug, name = rec.name, locale = rec.locale}
+  results[rec.name] = rec.slug
 end
-table.sort(results, function(a, b) return a.slug < b.slug end)
 
 local table_to_str = request('!.formats.lua_table.save')
 print(table_to_str(results))

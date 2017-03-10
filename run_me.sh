@@ -24,6 +24,14 @@ fi
 set -e
 mkdir -p ./data
 
+
+function retrieve
+{
+  local url=$1
+  local output_file=$2
+  wget --no-clobber --quiet --output-document=$output_file $url
+}
+
 ## Get realms
 function get_realms
 {
@@ -31,14 +39,8 @@ function get_realms
   if [[ ! -e $realms_json ]]
   then
     echo "Getting realms list..."
-    local realms_url="https://eu.api.battle.net/wow/realm/status?"
-    realms_url+="locale=$locale&"
-    realms_url+="apikey=$api_key"
-    wget \
-      --no-clobber \
-      --output-document=$realms_json \
-      --quiet \
-      $realms_url
+    local realms_url="https://eu.api.battle.net/wow/realm/status?locale=$locale&apikey=$api_key"
+    retrieve $realms_url $realms_json
   fi
 }
 
@@ -66,14 +68,8 @@ function get_species
   if [[ ! -e $species_json ]]
   then
     echo "Getting pet list..."
-    local species_url="https://eu.api.battle.net/wow/pet/?"
-    species_url+="locale=$locale&"
-    species_url+="apikey=$api_key"
-    wget \
-      --no-clobber \
-      --output-document=$species_json \
-      --quiet \
-      $species_url
+    local species_url="https://eu.api.battle.net/wow/pet/?locale=$locale&apikey=$api_key"
+    retrieve $species_url $species_json
   fi
 }
 
@@ -100,7 +96,7 @@ echo "{}" > $results_lua
 cd ./lua
 lua ./print_realm_slugs_from_config.lua ../$config_lua ../$realms_lua | \
 while read servname; do
-  link_file="./data/${servname}_link.json"
+  link_file="./data/$servname.json"
   if $use_cache && [[ -e ../$link_file ]]
   then
     echo "Using old link to '$servname'."
@@ -108,27 +104,17 @@ while read servname; do
     echo "Getting link to realm '$servname'."
     rm --force ../$link_file
     # auc_link_url="http://eu.battle.net/api/wow/auction/data/$servname"
-    auc_link_url="https://eu.api.battle.net/wow/auction/data/$servname?"\
-    auc_link_url+="locale=en_GB&"\
-    auc_link_url+="apikey=$api_key"
-    wget \
-      --no-clobber \
-      --output-document=../$link_file \
-      --quiet \
-      $auc_link_url
+    auc_link_url="https://eu.api.battle.net/wow/auction/data/$servname?locale=$locale&apikey=$api_key"
+    retrieve $auc_link_url ../$link_file
   fi
   url_and_name=($(lua ./suggest_filename.lua ../$link_file))
   auc_url=${url_and_name[0]}
-  auc_json="../data/auc_${url_and_name[1]}"
+  auc_json="../data/data_${url_and_name[1]}"
   if [[ ! -e $auc_json ]]
   then
-    rm --force ../data/auc_*$servname*.json
+    rm --force ../data/data_*$servname*.json
     echo "  Getting actual auction data..."
-    wget \
-      --no-clobber \
-      --output-document=../data/$auc_json \
-      --quiet \
-      $auc_url
+    retrieve $auc_url ../data/$auc_json
   else
     echo "  File already retrieved. Using it."
   fi
