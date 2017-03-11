@@ -1,35 +1,20 @@
--- Extracts download link and gives a neat file name for given JSON file
--- for server.
-
 --[[
-  Status: done
-  Last mod.: 2016-03-22
-  Notes:
+  Receives file name with parsed auction link data.
 
-    Usage: <json_auction_link>
+  Returns neat JSON file name and URL link to it.
 
-    <json_auction_link> sample contents:
-
-    {
-      "files": [
-        {
-          "url": "http://auction-api-eu.worldofwarcraft.com/auction-data/b6a53e4bbf5d5f7b78b69a419b5d4970/auctions.json",
-          "lastModified": 1454101069000
-        }
-      ]
-    }
-
-    Indeed JSON is minified.
+  Suggested file name is based on given file name (server name) and
+  data from file (creation time).
 ]]
 
 require('workshop.base')
 
 local file_as_string = request('!.file.as_string')
-local json_as_table = request('!.formats.json.load')
+local table_from_str = request('!.formats.lua_table.load')
 
-local json_link = arg[1]
-local servername = string.match(json_link, '.*%/([%w%-]+)') or json_link
-local auc_link_data = json_as_table(file_as_string(json_link))
+local link_file_name = arg[1]
+local servername = string.match(link_file_name, '.*%/([%w%-]+)') or link_file_name
+local auc_link_data = table_from_str(file_as_string(link_file_name))
 
 local snapshot_time = auc_link_data.files[1].lastModified / 1000
 local snapshot_path = auc_link_data.files[1].url
@@ -43,4 +28,5 @@ print(result)
 ~ 2013-09
 2016-01-31
 2016-03-22
+2017-03-10
 ]]

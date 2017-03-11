@@ -1,7 +1,7 @@
 local realms =
   {
-    'Ravencrest',
-    'Saurfang',
+    -- 'Ravencrest',
+    -- 'Saurfang',
     "Blade's Edge",
     'Chamber of Aspects',
     -- 'Magtheridon',
@@ -368,6 +368,6 @@ local pets =
 
 return
   {
-    realms = realms,
-    pets = nil,
+    realms = realms, -- require('all_realms'),
+    pets = pets,
   }

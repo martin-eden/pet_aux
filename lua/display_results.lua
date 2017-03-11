@@ -44,8 +44,8 @@ for pet_name, servers in sorted_pairs(pets) do
         end
       end
     end
-  fill_results('1..24')
-  fill_results('25')
+  fill_results(1)
+  fill_results(2)
 end
 
 --stingify results

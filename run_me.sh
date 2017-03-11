@@ -7,13 +7,6 @@
 #   process and update current results (with pet list from config)
 # print result
 
-## Set api_key, field names and mode
-api_key="p8sg9fnpz5sh859urt92vaanbc6ztmj2"
-locale="en_GB"
-
-config_lua="./config.lua"
-results_lua="./results.lua"
-results_tmp="${results}.tmp"
 use_cache=false
 if [[ $1 = "--use-cache" ]]
 then
@@ -21,116 +14,186 @@ then
   use_cache=true
 fi
 
-set -e
-mkdir -p ./data
+# All work is done from ./lua directory. So all paths related to it.
+data_path=../data
 
+cd lua
+
+# set -e
+
+mkdir -p $data_path
+mkdir -p $data_path/json
+mkdir -p $data_path/converted
+mkdir -p $data_path/filtered
+
+function convert
+{
+  local input_file=$1
+  local output_file=$2
+  lua json_to_lua.lua $input_file $output_file
+}
+
+function get_json_name
+{
+  echo $data_path/json/$(basename $1 .json).json
+}
+
+function get_converted_name
+{
+  echo $data_path/converted/$(basename $1 .json).lua
+}
+
+function get_filtered_name
+{
+  echo $data_path/filtered/$(basename $1)
+}
 
 function retrieve
 {
   local url=$1
   local output_file=$2
+  rm --force $output_file
   wget --no-clobber --quiet --output-document=$output_file $url
 }
 
+## Set api_key, field names and mode
+api_key="p8sg9fnpz5sh859urt92vaanbc6ztmj2"
+locale="en_GB"
+
 ## Get realms
-function get_realms
-{
-  local realms_json=$1
-  if [[ ! -e $realms_json ]]
-  then
-    echo "Getting realms list..."
-    local realms_url="https://eu.api.battle.net/wow/realm/status?locale=$locale&apikey=$api_key"
-    retrieve $realms_url $realms_json
-  fi
-}
+echo -n "Getting realms list... "
+realms_json=$(get_json_name realms.json)
+if [[ -e $realms_json ]]
+then
+  echo "already done"
+else
+  realms_url="https://eu.api.battle.net/wow/realm/status?locale=$locale&apikey=$api_key"
+  retrieve $realms_url $realms_json
+  echo "done"
+fi
 
-function prepare_realms
-{
-  local realms_lua=$1
-  if [[ ! -e $realms_lua ]]
-  then
-    local realms_json="./data/realms.json"
-    get_realms $realms_json
-    echo "  Building realms list."
-    cd ./lua
-    lua ./auction_realms_list.lua ../$realms_json > ../$realms_lua
-    cd ..
-  fi
-}
+echo -n "Converting realms... "
+realms_lua=$(get_converted_name $realms_json)
+if [[ -e $realms_lua ]]
+then
+  echo "already done"
+else
+  convert $realms_json $realms_lua
+  echo "done"
+fi
 
-realms_lua="./data/realms.lua"
-prepare_realms $realms_lua
+echo -n "Mapping realms... "
+realms_map=$(get_filtered_name $realms_lua)
+if [[ -e $realms_map ]]
+then
+  echo "already done"
+else
+  lua map_realms.lua $realms_lua $realms_map
+  echo "done"
+fi
 
 ## Get species
-function get_species
-{
-  local species_json=$1
-  if [[ ! -e $species_json ]]
-  then
-    echo "Getting pet list..."
-    local species_url="https://eu.api.battle.net/wow/pet/?locale=$locale&apikey=$api_key"
-    retrieve $species_url $species_json
-  fi
-}
 
-function prepare_species
-{
-  local species_lua=$1
-  if [[ ! -e $species_lua ]]
-  then
-    local species_json="./data/species.json"
-    get_species $species_json
-    echo "  Building pet list."
-    cd ./lua
-    lua ./pet_species_list.lua ../$species_json > ../$species_lua
-    cd ..
-  fi
-}
+species_json=$(get_json_name species.json)
+echo -n "Getting pet list... "
+if [[ -e $species_json ]]
+then
+  echo "already done"
+else
+  species_url="https://eu.api.battle.net/wow/pet/?locale=$locale&apikey=$api_key"
+  retrieve $species_url $species_json
+  echo "done"
+fi
 
-species_lua="./data/species.lua"
-prepare_species $species_lua
+echo -n "Converting pet list... "
+species_lua=$(get_converted_name $species_json)
+if [[ -e $species_lua ]]
+then
+  echo "already done"
+else
+  convert $species_json $species_lua
+  echo "done"
+fi
+
+species_map=$(get_filtered_name $species_lua)
+echo -n "Filtering species... "
+if [[ -e $species_map ]]
+then
+  echo "already done"
+else
+  lua pet_species_list.lua $species_lua $species_map
+  echo "done"
+fi
 
 ## Get auctions and extract species
-rm --force $results_lua
+results_lua="../results.lua"
+config_lua="../config.lua"
+results_tmp=$results.tmp
 echo "{}" > $results_lua
-cd ./lua
-lua ./print_realm_slugs_from_config.lua ../$config_lua ../$realms_lua | \
+lua print_realm_slugs_from_config.lua $config_lua $realms_map | \
 while read servname; do
-  link_file="./data/$servname.json"
-  if $use_cache && [[ -e ../$link_file ]]
+  json_link_file=$(get_json_name $servname)
+  if $use_cache && [[ -e $json_link_file ]]
   then
-    echo "Using old link to '$servname'."
+    echo "Using link to realm '$servname' from cache."
   else
     echo "Getting link to realm '$servname'."
-    rm --force ../$link_file
-    # auc_link_url="http://eu.battle.net/api/wow/auction/data/$servname"
+    # We must retrieve this file as it contains last auction time
+    # non-auth link was "http://eu.battle.net/api/wow/auction/data/$servname"
     auc_link_url="https://eu.api.battle.net/wow/auction/data/$servname?locale=$locale&apikey=$api_key"
-    retrieve $auc_link_url ../$link_file
+    retrieve $auc_link_url $json_link_file
   fi
-  url_and_name=($(lua ./suggest_filename.lua ../$link_file))
+
+  echo -n "  Converting to lua... "
+  lua_link_file=$(get_converted_name $json_link_file)
+  convert $json_link_file $lua_link_file
+  echo "done"
+
+  url_and_name=($(lua suggest_filename.lua $lua_link_file))
   auc_url=${url_and_name[0]}
-  auc_json="../data/data_${url_and_name[1]}"
-  if [[ ! -e $auc_json ]]
+  json_auc_name=$(get_json_name ${url_and_name[1]})
+  echo -n "  Getting actual auction data... "
+  if [[ -e $json_auc_name ]]
   then
-    rm --force ../data/data_*$servname*.json
-    echo "  Getting actual auction data..."
-    retrieve $auc_url ../data/$auc_json
+    echo "already done"
   else
-    echo "  File already retrieved. Using it."
+    retrieve $auc_url $json_auc_name
+    echo "done"
   fi
-  echo "  Processing..."
-  lua \
-    ./auc_extreme_pet_prices.lua \
-    $auc_json \
-    ../$config_lua \
-    ../$species_lua \
-    ../$results_lua > \
-    ../$results_tmp
-  cat ../$results_tmp > ../$results_lua
+
+  echo -n "  Converting to lua... "
+  lua_auc_name=$(get_converted_name $json_auc_name)
+  if [[ -e $lua_auc_name ]]
+  then
+    echo "already done"
+  else
+    convert $json_auc_name $lua_auc_name
+    echo "done"
+  fi
+
+  echo -n "  Filtering... "
+  lua_filtered_auc_name=$(get_filtered_name $lua_auc_name)
+  if [[ -e $lua_filtered_auc_name ]]
+  then
+    echo "already done"
+  else
+    lua filter_auctions.lua $lua_auc_name $lua_filtered_auc_name
+    echo "done"
+  fi
+
+  echo -n "  Processing... "
+  lua auc_extreme_pet_prices.lua \
+    $lua_filtered_auc_name $config_lua $species_map $results_lua > $results_tmp
+  if [[ -s $results_tmp ]]
+  then
+    cat $results_tmp > $results_lua
+  fi
+  echo "done"
 done
-cd ..
 rm --force $results_tmp
 echo "Results are in '$results_lua'"
 
 # cd ./lua
 # lua ./display_results.lua ../results.lua 3 | egrep --after-context=3 "\(1\)\s+Ford"
+
+cd ..

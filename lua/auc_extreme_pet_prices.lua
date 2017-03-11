@@ -1,12 +1,11 @@
 require('workshop.base')
 
 local file_as_string = request('!.file.as_string')
-local json_as_table = request('!.formats.json.load')
 local table_from_str = request('!.formats.lua_table.load')
 
-local json_auc_list_filename = arg[1]
-local json_auc_list = file_as_string(json_auc_list_filename)
-local auc_list = json_as_table(json_auc_list)
+local auc_list_filename = arg[1]
+local auc_list_str = file_as_string(auc_list_filename)
+local auc_list = table_from_str(auc_list_str)
 
 local config_name = arg[2]
 local config = dofile(config_name)
@@ -23,13 +22,7 @@ else
 end
 
 local pet_list_name = arg[3]
-local pet_list = table_from_str(file_as_string(pet_list_name))
-
-local pet_by_id = {}
-for i = 1, #pet_list do
-  local rec = pet_list[i]
-  pet_by_id[rec.id] = rec
-end
+local pets = table_from_str(file_as_string(pet_list_name))
 
 local current_results_name = arg[4]
 local results = table_from_str(file_as_string(current_results_name))
@@ -50,7 +43,6 @@ end
 
 local add_pet =
   function(pet_name, category, buyout)
-    local buyout = math.ceil(buyout / 1e4)
     results[pet_name] = results[pet_name] or {}
     results[pet_name][realm_name] = results[pet_name][realm_name] or {}
     results[pet_name][realm_name][category] =
@@ -60,8 +52,8 @@ local add_pet =
     end
   end
 
-local category_low = '1..24'
-local category_high = '25'
+local category_low = 1
+local category_high = 2
 local battle_stone_id = 92741
 local battle_stone_name = 'Flawless Battle-Stone'
 local missing_pet_idx_complained = {}
@@ -69,12 +61,10 @@ for i = 1, #auc_list.auctions do
   local rec = auc_list.auctions[i]
   if (rec.item == battle_stone_id) then
     add_pet(battle_stone_name, category_low, rec.buyout)
-    add_pet(battle_stone_name, category_high, rec.buyout)
   end
   if rec.petSpeciesId and rec.buyout > 0 then
-    local buyout = math.ceil(rec.buyout / 1e4)
     local pet_id = rec.petSpeciesId
-    local pet_name = pet_by_id[pet_id] and pet_by_id[pet_id].name
+    local pet_name = pets[pet_id]
     if
       not pet_name and
       not missing_pet_idx_complained[pet_id]
