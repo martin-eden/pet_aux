@@ -1,331 +1,479 @@
 {
-  ['Ashstone Core'] = {
-    ["Blade's Edge"] = {
-      [1] = 41,
-      [2] = 10000,
+  ['Aqua Strider'] = {
+    Aegwynn = {
+      [1] = 6789,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 86,
-      [2] = 5287,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 5902,
+    },
+  },
+  ['Ashstone Core'] = {
+    Aegwynn = {
+      [1] = 52,
+      [2] = 3217,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 35,
+      [2] = 3400,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 199,
+      [2] = 6000,
     },
   },
   ['Bone Serpent'] = {
-    ["Blade's Edge"] = {
-      [1] = 2989,
+    Aegwynn = {
+      [1] = 888,
+      [2] = 8000,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 3900,
-      [2] = 6500,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 2566,
+      [2] = 3959,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 4000,
+      [2] = 6900,
     },
   },
   Chrominius = {
-    ["Blade's Edge"] = {
-      [1] = 764,
-      [2] = 10000,
+    Aegwynn = {
+      [1] = 558,
+      [2] = 5711,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 1999,
-      [2] = 4988,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 900,
+      [2] = 3900,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 400,
+      [2] = 7000,
     },
   },
   ['Cinder Pup'] = {
-    ["Blade's Edge"] = {
-      [1] = 10,
+    Aegwynn = {
+      [1] = 2899,
+      [2] = 3800,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 81,
-      [2] = 2986,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 793,
+      [2] = 1950,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 63,
     },
   },
   ['Corefire Imp'] = {
-    ["Blade's Edge"] = {
+    Aegwynn = {
+      [1] = 51,
+      [2] = 2291,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
       [1] = 122,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 259,
-      [2] = 3500,
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 150,
     },
   },
   ['Dandelion Frolicker'] = {
-    ["Blade's Edge"] = {
-      [1] = 1849,
+    Aegwynn = {
+      [1] = 195,
+      [2] = 5995,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 720,
-      [2] = 8500,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 250,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 983,
+      [2] = 5996,
     },
   },
   ['Darkmoon Turtle'] = {
-    ["Blade's Edge"] = {
-      [1] = 10000,
+    Aegwynn = {
+      [2] = 6977,
     },
-  },
-  ['Death Talon Whelpguard'] = {
-    ["Blade's Edge"] = {
-      [1] = 148,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 5451,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 2999,
-    },
-  },
-  ['Direhorn Runt'] = {
-    ["Blade's Edge"] = {
-      [1] = 290,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 85,
-      [2] = 4989,
-    },
-  },
-  ['Doom Bloom'] = {
-    ["Blade's Edge"] = {
-      [1] = 400,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 240,
-      [2] = 3986,
-    },
-  },
-  ['Elementium Geode'] = {
-    ["Blade's Edge"] = {
-      [1] = 2795,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 1600,
-      [2] = 6947,
-    },
-  },
-  ['Everbloom Peachick'] = {
-    ["Blade's Edge"] = {
-      [1] = 311,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 1766,
-      [2] = 3849,
-    },
-  },
-  ["Father Winter's Helper"] = {
-    ["Blade's Edge"] = {
-      [1] = 7,
-      [2] = 1800,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 99,
-      [2] = 3452,
-    },
-  },
-  ['Flawless Battle-Stone'] = {
-    ["Blade's Edge"] = {
-      [1] = 5479,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 5500,
-    },
-  },
-  ['Harbinger of Flame'] = {
-    ["Blade's Edge"] = {
-      [1] = 160,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 93,
-      [2] = 5001,
-    },
-  },
-  ['Iron Starlette'] = {
-    ["Blade's Edge"] = {
-      [1] = 1000,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 492,
-      [2] = 65557,
-    },
-  },
-  ['Leviathan Hatchling'] = {
-    ["Blade's Edge"] = {
-      [1] = 425,
-      [2] = 10000,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 49,
-    },
-  },
-  ["Lil' Bad Wolf"] = {
-    ["Blade's Edge"] = {
-      [1] = 2077,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 4500,
-      [2] = 10000,
-    },
-  },
-  ['Macabre Marionette'] = {
-    ["Blade's Edge"] = {
-      [1] = 3750,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 1999,
-    },
-  },
-  ['Netherspawn, Spawn of Netherspawn'] = {
-    ["Blade's Edge"] = {
-      [1] = 131,
-      [2] = 10000,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 110,
-      [2] = 3329,
-    },
-  },
-  ['Phoenix Hawk Hatchling'] = {
-    ["Blade's Edge"] = {
-      [1] = 1250,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 550,
-      [2] = 4300,
-    },
-  },
-  ['Puddle Terror'] = {
-    ["Blade's Edge"] = {
-      [1] = 3000,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 3000,
-      [2] = 5500,
-    },
-  },
-  ['Razzashi Hatchling'] = {
-    ["Blade's Edge"] = {
-      [1] = 24999,
-    },
-    ['Chamber of Aspects'] = {
-      [2] = 29337,
-    },
-  },
-  ['Silver Dragonhawk Hatchling'] = {
-    ["Blade's Edge"] = {
-      [1] = 930,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 1517,
-      [2] = 4280,
-    },
-  },
-  ['Sinister Squashling'] = {
-    ["Blade's Edge"] = {
-      [1] = 15,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 22,
-      [2] = 2965,
-    },
-  },
-  ['Sister of Temptation'] = {
-    ["Blade's Edge"] = {
-      [1] = 100,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 418,
-      [2] = 10999,
-    },
-  },
-  ['Snowshoe Rabbit'] = {
-    ["Blade's Edge"] = {
-      [1] = 501,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 200,
-      [2] = 4300,
-    },
-  },
-  ['Stitched Pup'] = {
-    ["Blade's Edge"] = {
-      [1] = 3000,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 199,
-      [2] = 3499,
-    },
-  },
-  ['Sunblade Micro-Defender'] = {
-    ["Blade's Edge"] = {
-      [1] = 2796,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 901,
-      [2] = 4999,
-    },
-  },
-  ['Toxic Wasteling'] = {
-    ["Blade's Edge"] = {
-      [1] = 2,
-    },
-    ['Chamber of Aspects'] = {
-      [1] = 49,
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
       [2] = 7200,
     },
   },
-  ['Untamed Hatchling'] = {
-    ["Blade's Edge"] = {
-      [1] = 2999,
+  ['Death Talon Whelpguard'] = {
+    Aegwynn = {
+      [1] = 99,
+      [2] = 3744,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 1259,
-      [2] = 3899,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 1131,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 222,
+      [2] = 6000,
+    },
+  },
+  ['Direhorn Runt'] = {
+    Aegwynn = {
+      [1] = 149,
+      [2] = 4598,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 233,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 899,
+    },
+  },
+  ['Doom Bloom'] = {
+    Aegwynn = {
+      [1] = 799,
+      [2] = 2499,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 499,
+      [2] = 6500,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 126,
+      [2] = 5000,
+    },
+  },
+  ['Elementium Geode'] = {
+    Aegwynn = {
+      [1] = 5998,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 3973,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 4998,
+    },
+  },
+  ['Everbloom Peachick'] = {
+    Aegwynn = {
+      [1] = 150,
+      [2] = 5999,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 471,
+      [2] = 6678,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 282,
+      [2] = 6000,
+    },
+  },
+  ["Father Winter's Helper"] = {
+    Aegwynn = {
+      [1] = 88,
+      [2] = 3944,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 444,
+      [2] = 3600,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 143,
+      [2] = 3999,
+    },
+  },
+  ['Flawless Battle-Stone'] = {
+    Aegwynn = {
+      [1] = 2500,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 5993,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 4443,
+    },
+  },
+  ['Harbinger of Flame'] = {
+    Aegwynn = {
+      [1] = 201,
+      [2] = 3999,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 135,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 50,
+      [2] = 6000,
+    },
+  },
+  ['Iron Starlette'] = {
+    Aegwynn = {
+      [1] = 405,
+      [2] = 4900,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 1422,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 400,
+      [2] = 4000,
+    },
+  },
+  ['Leviathan Hatchling'] = {
+    Aegwynn = {
+      [1] = 263,
+      [2] = 5995,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 100,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 80,
+      [2] = 2891,
+    },
+  },
+  ["Lil' Bad Wolf"] = {
+    Aegwynn = {
+      [1] = 370,
+      [2] = 4600,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 1000,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 400,
+    },
+  },
+  ['Macabre Marionette'] = {
+    Aegwynn = {
+      [1] = 3750,
+      [2] = 9488,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 500,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 19500,
+    },
+  },
+  ['Netherspawn, Spawn of Netherspawn'] = {
+    Aegwynn = {
+      [1] = 287,
+      [2] = 5900,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 432,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 399,
+      [2] = 3000,
+    },
+  },
+  ['Phoenix Hawk Hatchling'] = {
+    Aegwynn = {
+      [1] = 85,
+      [2] = 3999,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 100,
+      [2] = 6100,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 2975,
+      [2] = 6000,
+    },
+  },
+  ['Puddle Terror'] = {
+    Aegwynn = {
+      [1] = 3933,
+      [2] = 5939,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 775,
+      [2] = 8650,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [2] = 3950,
+    },
+  },
+  ['Razzashi Hatchling'] = {
+    Aegwynn = {
+      [1] = 37000,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 17013,
+    },
+  },
+  ['Silver Dragonhawk Hatchling'] = {
+    Aegwynn = {
+      [2] = 7000,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 64,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [2] = 3700,
+    },
+  },
+  ['Sinister Squashling'] = {
+    Aegwynn = {
+      [1] = 76,
+      [2] = 5995,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 18,
+      [2] = 4883,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 35,
+      [2] = 2449,
+    },
+  },
+  ['Sister of Temptation'] = {
+    Aegwynn = {
+      [1] = 552,
+      [2] = 3954,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 90,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 888,
+      [2] = 4300,
+    },
+  },
+  ['Snowshoe Rabbit'] = {
+    Aegwynn = {
+      [1] = 3975,
+      [2] = 3977,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 45,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 933,
+    },
+  },
+  ['Stitched Pup'] = {
+    Aegwynn = {
+      [1] = 485,
+      [2] = 3954,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 300,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 333,
+      [2] = 5000,
+    },
+  },
+  ['Sunblade Micro-Defender'] = {
+    Aegwynn = {
+      [1] = 1480,
+      [2] = 4977,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 2000,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 2370,
+      [2] = 5500,
+    },
+  },
+  ['Toxic Wasteling'] = {
+    Aegwynn = {
+      [1] = 6,
+      [2] = 2499,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 5,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 31,
+      [2] = 3999,
+    },
+  },
+  ['Untamed Hatchling'] = {
+    Aegwynn = {
+      [1] = 108,
+      [2] = 5711,
+    },
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 454,
+      [2] = 4900,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 111,
     },
   },
   ['Voodoo Figurine'] = {
-    ["Blade's Edge"] = {
-      [1] = 4898,
-      [2] = 10000,
+    Aegwynn = {
+      [1] = 2250,
+      [2] = 20000,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 5000,
-      [2] = 11001,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 1999,
     },
   },
   ["Winter's Little Helper"] = {
-    ["Blade's Edge"] = {
-      [1] = 19,
+    Aegwynn = {
+      [1] = 35,
+      [2] = 2877,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 95,
-      [2] = 3119,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 2,
+      [2] = 2800,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 150,
+      [2] = 6000,
     },
   },
   ['Worg Pup'] = {
-    ["Blade's Edge"] = {
-      [1] = 1000,
+    Aegwynn = {
+      [1] = 10,
+      [2] = 3912,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 397,
-      [2] = 4825,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 20,
+      [2] = 3900,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 38,
+      [2] = 3400,
     },
   },
   ['Young Talbuk'] = {
-    ["Blade's Edge"] = {
-      [1] = 1653,
+    Aegwynn = {
+      [1] = 2316,
+      [2] = 2450,
     },
-    ['Chamber of Aspects'] = {
-      [2] = 5797,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 1086,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 3000,
+      [2] = 4999,
     },
   },
   ['Zandalari Footslasher'] = {
-    ["Blade's Edge"] = {
-      [1] = 299,
+    Aegwynn = {
+      [1] = 500,
+      [2] = 3957,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 99,
-      [2] = 7452,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 147,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 200,
+      [2] = 3999,
     },
   },
   ['Zandalari Toenibbler'] = {
-    ["Blade's Edge"] = {
-      [1] = 75,
+    Aegwynn = {
+      [1] = 1887,
+      [2] = 3912,
     },
-    ['Chamber of Aspects'] = {
-      [1] = 135,
-      [2] = 2150,
+    ['Aerie Peak/Bronzebeard'] = {
+      [1] = 363,
+    },
+    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+      [1] = 399,
+      [2] = 3900,
     },
   },
 }

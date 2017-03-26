@@ -14,23 +14,29 @@ then
   use_cache=true
 fi
 
-# All work is done from ./lua directory. So all paths related to it.
-data_path=../data
+home_dir=`pwd`
+
+export data_path=$home_dir/data
+export lua_path=$home_dir/lua
+export bash_path=$home_dir/bash
+
+bash $bash_path/create_directories.sh
 
 cd lua
 
 # set -e
 
-mkdir -p $data_path
-mkdir -p $data_path/json
-mkdir -p $data_path/converted
-mkdir -p $data_path/filtered
 
 function convert
 {
   local input_file=$1
   local output_file=$2
   lua json_to_lua.lua $input_file $output_file
+}
+
+function get_tmp_name
+{
+  echo $data_path/tmp/$(basename $1)
 }
 
 function get_json_name
@@ -50,10 +56,7 @@ function get_filtered_name
 
 function retrieve
 {
-  local url=$1
-  local output_file=$2
-  rm --force $output_file
-  wget --no-clobber --quiet --output-document=$output_file $url
+  $bash_path/retrieve.sh $1 $2
 }
 
 ## Set api_key, field names and mode
