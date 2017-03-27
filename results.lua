@@ -1,479 +1,631 @@
 {
   ['Aqua Strider'] = {
-    Aegwynn = {
-      [1] = 6789,
+    ["Blade's Edge"] = {
+      [1] = 4000,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 5902,
+    ['Chamber of Aspects'] = {
+      [1] = 16940,
+      [2] = 18381,
+    },
+    Ravencrest = {
+      [1] = 4500,
+    },
+    Saurfang = {
+      [1] = 8999,
     },
   },
   ['Ashstone Core'] = {
-    Aegwynn = {
-      [1] = 52,
-      [2] = 3217,
+    ["Blade's Edge"] = {
+      [1] = 11,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 35,
-      [2] = 3400,
+    ['Chamber of Aspects'] = {
+      [1] = 109,
+      [2] = 4000,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 199,
-      [2] = 6000,
+    Ravencrest = {
+      [1] = 230,
+      [2] = 2448,
+    },
+    Saurfang = {
+      [1] = 21,
     },
   },
   ['Bone Serpent'] = {
-    Aegwynn = {
-      [1] = 888,
-      [2] = 8000,
+    ["Blade's Edge"] = {
+      [1] = 3000,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 2566,
-      [2] = 3959,
+    ['Chamber of Aspects'] = {
+      [1] = 1285,
+      [2] = 5999,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 4000,
-      [2] = 6900,
+    Ravencrest = {
+      [1] = 1999,
+      [2] = 8008,
+    },
+    Saurfang = {
+      [1] = 1700,
     },
   },
   Chrominius = {
-    Aegwynn = {
-      [1] = 558,
-      [2] = 5711,
+    ["Blade's Edge"] = {
+      [1] = 480,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 900,
-      [2] = 3900,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+    ['Chamber of Aspects'] = {
       [1] = 400,
-      [2] = 7000,
+      [2] = 12001,
+    },
+    Ravencrest = {
+      [1] = 396,
+      [2] = 2898,
+    },
+    Saurfang = {
+      [1] = 1500,
+      [2] = 5300,
     },
   },
   ['Cinder Pup'] = {
-    Aegwynn = {
-      [1] = 2899,
-      [2] = 3800,
+    ["Blade's Edge"] = {
+      [1] = 20,
+      [2] = 2500,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 793,
-      [2] = 1950,
+    ['Chamber of Aspects'] = {
+      [1] = 27,
+      [2] = 4996,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 63,
+    Ravencrest = {
+      [1] = 19,
+      [2] = 2340,
+    },
+    Saurfang = {
+      [1] = 5,
+      [2] = 1995,
     },
   },
   ['Corefire Imp'] = {
-    Aegwynn = {
-      [1] = 51,
-      [2] = 2291,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 122,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+    ["Blade's Edge"] = {
       [1] = 150,
+      [2] = 2000,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 88,
+    },
+    Ravencrest = {
+      [1] = 94,
+      [2] = 2297,
+    },
+    Saurfang = {
+      [1] = 1950,
     },
   },
   ['Dandelion Frolicker'] = {
-    Aegwynn = {
-      [1] = 195,
-      [2] = 5995,
+    ["Blade's Edge"] = {
+      [1] = 848,
+      [2] = 4000,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 250,
+    ['Chamber of Aspects'] = {
+      [1] = 650,
+      [2] = 4990,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 983,
-      [2] = 5996,
+    Ravencrest = {
+      [1] = 885,
+      [2] = 6000,
+    },
+    Saurfang = {
+      [1] = 293,
     },
   },
   ['Darkmoon Turtle'] = {
-    Aegwynn = {
-      [2] = 6977,
+    ["Blade's Edge"] = {
+      [1] = 9987,
+      [2] = 6000,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 5451,
+    ['Chamber of Aspects'] = {
+      [1] = 13692,
+      [2] = 14232,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [2] = 7200,
+    Ravencrest = {
+      [1] = 7979,
+      [2] = 30000,
+    },
+    Saurfang = {
+      [1] = 7500,
+      [2] = 11307,
     },
   },
   ['Death Talon Whelpguard'] = {
-    Aegwynn = {
-      [1] = 99,
-      [2] = 3744,
+    ["Blade's Edge"] = {
+      [1] = 1000,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 1131,
+    ['Chamber of Aspects'] = {
+      [1] = 325,
+      [2] = 6902,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 222,
-      [2] = 6000,
+    Ravencrest = {
+      [1] = 140,
+      [2] = 2341,
+    },
+    Saurfang = {
+      [1] = 1900,
     },
   },
   ['Direhorn Runt'] = {
-    Aegwynn = {
-      [1] = 149,
-      [2] = 4598,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 233,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 899,
-    },
-  },
-  ['Doom Bloom'] = {
-    Aegwynn = {
-      [1] = 799,
-      [2] = 2499,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 499,
-      [2] = 6500,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 126,
-      [2] = 5000,
-    },
-  },
-  ['Elementium Geode'] = {
-    Aegwynn = {
-      [1] = 5998,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 3973,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 4998,
-    },
-  },
-  ['Everbloom Peachick'] = {
-    Aegwynn = {
-      [1] = 150,
-      [2] = 5999,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 471,
-      [2] = 6678,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 282,
-      [2] = 6000,
-    },
-  },
-  ["Father Winter's Helper"] = {
-    Aegwynn = {
-      [1] = 88,
-      [2] = 3944,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 444,
+    ["Blade's Edge"] = {
+      [1] = 250,
       [2] = 3600,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 143,
+    ['Chamber of Aspects'] = {
+      [1] = 150,
       [2] = 3999,
     },
-  },
-  ['Flawless Battle-Stone'] = {
-    Aegwynn = {
-      [1] = 2500,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 5993,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 4443,
-    },
-  },
-  ['Harbinger of Flame'] = {
-    Aegwynn = {
-      [1] = 201,
-      [2] = 3999,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 135,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 50,
-      [2] = 6000,
-    },
-  },
-  ['Iron Starlette'] = {
-    Aegwynn = {
-      [1] = 405,
-      [2] = 4900,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 1422,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 400,
-      [2] = 4000,
-    },
-  },
-  ['Leviathan Hatchling'] = {
-    Aegwynn = {
-      [1] = 263,
-      [2] = 5995,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
+    Ravencrest = {
       [1] = 100,
+      [2] = 2738,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 80,
-      [2] = 2891,
-    },
-  },
-  ["Lil' Bad Wolf"] = {
-    Aegwynn = {
-      [1] = 370,
-      [2] = 4600,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 1000,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 400,
-    },
-  },
-  ['Macabre Marionette'] = {
-    Aegwynn = {
-      [1] = 3750,
-      [2] = 9488,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 500,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 19500,
-    },
-  },
-  ['Netherspawn, Spawn of Netherspawn'] = {
-    Aegwynn = {
-      [1] = 287,
-      [2] = 5900,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 432,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 399,
-      [2] = 3000,
-    },
-  },
-  ['Phoenix Hawk Hatchling'] = {
-    Aegwynn = {
-      [1] = 85,
-      [2] = 3999,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 100,
-      [2] = 6100,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 2975,
-      [2] = 6000,
-    },
-  },
-  ['Puddle Terror'] = {
-    Aegwynn = {
-      [1] = 3933,
-      [2] = 5939,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 775,
-      [2] = 8650,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [2] = 3950,
-    },
-  },
-  ['Razzashi Hatchling'] = {
-    Aegwynn = {
-      [1] = 37000,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 17013,
-    },
-  },
-  ['Silver Dragonhawk Hatchling'] = {
-    Aegwynn = {
-      [2] = 7000,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 64,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [2] = 3700,
-    },
-  },
-  ['Sinister Squashling'] = {
-    Aegwynn = {
-      [1] = 76,
-      [2] = 5995,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 18,
-      [2] = 4883,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 35,
-      [2] = 2449,
-    },
-  },
-  ['Sister of Temptation'] = {
-    Aegwynn = {
-      [1] = 552,
-      [2] = 3954,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 90,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 888,
-      [2] = 4300,
-    },
-  },
-  ['Snowshoe Rabbit'] = {
-    Aegwynn = {
-      [1] = 3975,
-      [2] = 3977,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 45,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 933,
-    },
-  },
-  ['Stitched Pup'] = {
-    Aegwynn = {
-      [1] = 485,
-      [2] = 3954,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 300,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 333,
-      [2] = 5000,
-    },
-  },
-  ['Sunblade Micro-Defender'] = {
-    Aegwynn = {
-      [1] = 1480,
-      [2] = 4977,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 2000,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 2370,
-      [2] = 5500,
-    },
-  },
-  ['Toxic Wasteling'] = {
-    Aegwynn = {
-      [1] = 6,
-      [2] = 2499,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 5,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 31,
-      [2] = 3999,
-    },
-  },
-  ['Untamed Hatchling'] = {
-    Aegwynn = {
-      [1] = 108,
-      [2] = 5711,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 454,
-      [2] = 4900,
-    },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 111,
-    },
-  },
-  ['Voodoo Figurine'] = {
-    Aegwynn = {
-      [1] = 2250,
-      [2] = 20000,
-    },
-    ['Aerie Peak/Bronzebeard'] = {
+    Saurfang = {
       [1] = 1999,
     },
   },
-  ["Winter's Little Helper"] = {
-    Aegwynn = {
-      [1] = 35,
-      [2] = 2877,
+  ['Doom Bloom'] = {
+    ["Blade's Edge"] = {
+      [1] = 175,
+      [2] = 3100,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 2,
+    ['Chamber of Aspects'] = {
+      [1] = 175,
+      [2] = 4243,
+    },
+    Ravencrest = {
+      [1] = 250,
+      [2] = 2489,
+    },
+    Saurfang = {
+      [1] = 30,
+    },
+  },
+  ['Elementium Geode'] = {
+    ["Blade's Edge"] = {
+      [1] = 2996,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 5912,
+      [2] = 7999,
+    },
+    Ravencrest = {
+      [1] = 1941,
+    },
+    Saurfang = {
+      [1] = 5000,
+    },
+  },
+  ['Everbloom Peachick'] = {
+    ["Blade's Edge"] = {
+      [1] = 987,
+      [2] = 4000,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 1266,
+      [2] = 4274,
+    },
+    Ravencrest = {
+      [1] = 1208,
+      [2] = 4400,
+    },
+    Saurfang = {
+      [1] = 430,
+    },
+  },
+  ["Father Winter's Helper"] = {
+    ["Blade's Edge"] = {
+      [1] = 270,
+      [2] = 3000,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 63,
+      [2] = 6039,
+    },
+    Ravencrest = {
+      [1] = 2205,
+      [2] = 2211,
+    },
+    Saurfang = {
+      [1] = 70,
+      [2] = 3995,
+    },
+  },
+  ['Flawless Battle-Stone'] = {
+    ["Blade's Edge"] = {
+      [1] = 5000,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 7000,
+    },
+    Ravencrest = {
+      [1] = 1068,
+    },
+    Saurfang = {
+      [1] = 5599,
+    },
+  },
+  ['Harbinger of Flame'] = {
+    ["Blade's Edge"] = {
+      [1] = 165,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 95,
+      [2] = 6307,
+    },
+    Ravencrest = {
+      [1] = 46,
+      [2] = 2246,
+    },
+    Saurfang = {
+      [1] = 32,
+    },
+  },
+  ['Iron Starlette'] = {
+    ["Blade's Edge"] = {
+      [1] = 398,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 600,
+    },
+    Ravencrest = {
+      [1] = 1200,
+      [2] = 40000,
+    },
+    Saurfang = {
+      [1] = 318,
+      [2] = 7706,
+    },
+  },
+  ['Leviathan Hatchling'] = {
+    ["Blade's Edge"] = {
+      [1] = 99,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 85,
+    },
+    Ravencrest = {
+      [1] = 100,
+      [2] = 2309,
+    },
+    Saurfang = {
+      [1] = 140,
+    },
+  },
+  ["Lil' Bad Wolf"] = {
+    ["Blade's Edge"] = {
+      [1] = 1099,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 998,
+      [2] = 2995,
+    },
+    Ravencrest = {
+      [1] = 999,
+      [2] = 3150,
+    },
+    Saurfang = {
+      [1] = 1199,
+      [2] = 6800,
+    },
+  },
+  ['Macabre Marionette'] = {
+    ["Blade's Edge"] = {
+      [1] = 2000,
+      [2] = 9000,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 3798,
+      [2] = 7999,
+    },
+    Ravencrest = {
+      [1] = 2976,
+    },
+    Saurfang = {
+      [1] = 2599,
+    },
+  },
+  ['Netherspawn, Spawn of Netherspawn'] = {
+    ["Blade's Edge"] = {
+      [1] = 80,
+      [2] = 4400,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 245,
+      [2] = 3994,
+    },
+    Ravencrest = {
+      [1] = 350,
+      [2] = 2581,
+    },
+    Saurfang = {
+      [1] = 95,
+      [2] = 3099,
+    },
+  },
+  ['Phoenix Hawk Hatchling'] = {
+    ["Blade's Edge"] = {
+      [1] = 500,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 250,
+      [2] = 3998,
+    },
+    Ravencrest = {
+      [1] = 215,
+      [2] = 6000,
+    },
+    Saurfang = {
+      [1] = 476,
+      [2] = 6582,
+    },
+  },
+  ['Puddle Terror'] = {
+    ["Blade's Edge"] = {
+      [1] = 2997,
+      [2] = 4600,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 1900,
+      [2] = 7250,
+    },
+    Ravencrest = {
+      [1] = 969,
+      [2] = 3169,
+    },
+    Saurfang = {
+      [1] = 2999,
+      [2] = 4995,
+    },
+  },
+  ['Razzashi Hatchling'] = {
+    ["Blade's Edge"] = {
+      [1] = 100001,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 20001,
+      [2] = 30429,
+    },
+    Ravencrest = {
+      [1] = 11773,
+    },
+    Saurfang = {
+      [1] = 9987,
+      [2] = 34925,
+    },
+  },
+  ['Silver Dragonhawk Hatchling'] = {
+    ["Blade's Edge"] = {
       [2] = 2800,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
+    ['Chamber of Aspects'] = {
+      [1] = 1500,
+      [2] = 4999,
+    },
+    Ravencrest = {
+      [1] = 110,
+      [2] = 3899,
+    },
+    Saurfang = {
+      [1] = 126,
+      [2] = 2495,
+    },
+  },
+  ['Sinister Squashling'] = {
+    ["Blade's Edge"] = {
+      [1] = 124,
+      [2] = 2499,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 100,
+      [2] = 3173,
+    },
+    Ravencrest = {
+      [1] = 85,
+      [2] = 2188,
+    },
+    Saurfang = {
+      [1] = 30,
+      [2] = 6173,
+    },
+  },
+  ['Sister of Temptation'] = {
+    ["Blade's Edge"] = {
+      [1] = 100,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 1000,
+    },
+    Ravencrest = {
+      [1] = 80,
+      [2] = 4400,
+    },
+    Saurfang = {
+      [1] = 500,
+    },
+  },
+  ['Snowshoe Rabbit'] = {
+    ["Blade's Edge"] = {
+      [1] = 282,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 40,
+    },
+    Ravencrest = {
+      [1] = 60,
+      [2] = 2265,
+    },
+    Saurfang = {
+      [1] = 4748,
+      [2] = 2495,
+    },
+  },
+  ['Stitched Pup'] = {
+    ["Blade's Edge"] = {
+      [1] = 500,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 698,
+      [2] = 3499,
+    },
+    Ravencrest = {
       [1] = 150,
-      [2] = 6000,
+      [2] = 2605,
+    },
+    Saurfang = {
+      [1] = 849,
+    },
+  },
+  ['Sunblade Micro-Defender'] = {
+    ["Blade's Edge"] = {
+      [1] = 1996,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 1317,
+      [2] = 5799,
+    },
+    Ravencrest = {
+      [1] = 1499,
+      [2] = 3247,
+    },
+    Saurfang = {
+      [1] = 3001,
+    },
+  },
+  ['Toxic Wasteling'] = {
+    ["Blade's Edge"] = {
+      [1] = 5,
+      [2] = 3000,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 5,
+      [2] = 4349,
+    },
+    Ravencrest = {
+      [1] = 4,
+      [2] = 4400,
+    },
+    Saurfang = {
+      [1] = 35,
+      [2] = 5995,
+    },
+  },
+  ['Untamed Hatchling'] = {
+    ["Blade's Edge"] = {
+      [1] = 199,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 482,
+      [2] = 4000,
+    },
+    Ravencrest = {
+      [1] = 80,
+      [2] = 2278,
+    },
+    Saurfang = {
+      [1] = 501,
+    },
+  },
+  ['Voodoo Figurine'] = {
+    ["Blade's Edge"] = {
+      [1] = 2999,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 1499,
+    },
+    Ravencrest = {
+      [1] = 3244,
+      [2] = 25000,
+    },
+    Saurfang = {
+      [1] = 999,
+      [2] = 16575,
+    },
+  },
+  ["Winter's Little Helper"] = {
+    ["Blade's Edge"] = {
+      [1] = 91,
+      [2] = 2500,
+    },
+    ['Chamber of Aspects'] = {
+      [1] = 90,
+      [2] = 3046,
+    },
+    Ravencrest = {
+      [1] = 13,
+      [2] = 4400,
+    },
+    Saurfang = {
+      [1] = 6,
+      [2] = 3000,
     },
   },
   ['Worg Pup'] = {
-    Aegwynn = {
-      [1] = 10,
-      [2] = 3912,
+    ["Blade's Edge"] = {
+      [1] = 60,
+      [2] = 2500,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 20,
-      [2] = 3900,
+    ['Chamber of Aspects'] = {
+      [1] = 45,
+      [2] = 7810,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 38,
-      [2] = 3400,
+    Ravencrest = {
+      [1] = 35,
+      [2] = 2215,
+    },
+    Saurfang = {
+      [1] = 40,
     },
   },
   ['Young Talbuk'] = {
-    Aegwynn = {
-      [1] = 2316,
-      [2] = 2450,
+    ["Blade's Edge"] = {
+      [1] = 500,
+      [2] = 3000,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 1086,
+    ['Chamber of Aspects'] = {
+      [1] = 3333,
+      [2] = 4000,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 3000,
-      [2] = 4999,
+    Ravencrest = {
+      [1] = 1989,
+      [2] = 4400,
+    },
+    Saurfang = {
+      [1] = 3118,
+      [2] = 2000,
     },
   },
   ['Zandalari Footslasher'] = {
-    Aegwynn = {
-      [1] = 500,
-      [2] = 3957,
+    ["Blade's Edge"] = {
+      [1] = 189,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 147,
+    ['Chamber of Aspects'] = {
+      [1] = 42,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 200,
-      [2] = 3999,
+    Ravencrest = {
+      [1] = 159,
+      [2] = 4400,
+    },
+    Saurfang = {
+      [1] = 195,
+      [2] = 6499,
     },
   },
   ['Zandalari Toenibbler'] = {
-    Aegwynn = {
-      [1] = 1887,
-      [2] = 3912,
+    ["Blade's Edge"] = {
+      [1] = 1689,
     },
-    ['Aerie Peak/Bronzebeard'] = {
-      [1] = 363,
+    ['Chamber of Aspects'] = {
+      [1] = 42,
     },
-    ["Agamaggan/Bloodscalp/Crushridge/Emeriss/Hakkar/Twilight's Hammer"] = {
-      [1] = 399,
-      [2] = 3900,
+    Ravencrest = {
+      [1] = 111,
+      [2] = 2311,
+    },
+    Saurfang = {
+      [1] = 1999,
+      [2] = 6887,
     },
   },
 }

@@ -20,23 +20,21 @@ export data_path=$home_dir/data
 export lua_path=$home_dir/lua
 export bash_path=$home_dir/bash
 
+## Set api_key, field names and mode
+export api_key="p8sg9fnpz5sh859urt92vaanbc6ztmj2"
+export locale="en_GB"
+
 bash $bash_path/create_directories.sh
 
 cd lua
 
 # set -e
 
-
 function convert
 {
   local input_file=$1
   local output_file=$2
   lua json_to_lua.lua $input_file $output_file
-}
-
-function get_tmp_name
-{
-  echo $data_path/tmp/$(basename $1)
 }
 
 function get_json_name
@@ -56,12 +54,8 @@ function get_filtered_name
 
 function retrieve
 {
-  $bash_path/retrieve.sh $1 $2
+  bash $bash_path/retrieve.sh $1 $2
 }
-
-## Set api_key, field names and mode
-api_key="p8sg9fnpz5sh859urt92vaanbc6ztmj2"
-locale="en_GB"
 
 ## Get realms
 echo -n "Getting realms list... "
@@ -118,7 +112,7 @@ else
   echo "done"
 fi
 
-species_map=$(get_filtered_name $species_lua)
+export species_map=$(get_filtered_name $species_lua)
 echo -n "Filtering species... "
 if [[ -e $species_map ]]
 then
@@ -128,72 +122,22 @@ else
   echo "done"
 fi
 
+
 ## Get auctions and extract species
-results_lua="../results.lua"
-config_lua="../config.lua"
-results_tmp=$results.tmp
+export results_lua="$home_dir/results.lua"
+export config_lua="$home_dir/config.lua"
 echo "{}" > $results_lua
+
+echo "Parallel loading and processing auctions."
+
 lua print_realm_slugs_from_config.lua $config_lua $realms_map | \
-while read servname; do
-  json_link_file=$(get_json_name $servname)
-  if $use_cache && [[ -e $json_link_file ]]
-  then
-    echo "Using link to realm '$servname' from cache."
-  else
-    echo "Getting link to realm '$servname'."
-    # We must retrieve this file as it contains last auction time
-    # non-auth link was "http://eu.battle.net/api/wow/auction/data/$servname"
-    auc_link_url="https://eu.api.battle.net/wow/auction/data/$servname?locale=$locale&apikey=$api_key"
-    retrieve $auc_link_url $json_link_file
-  fi
+parallel -j50 bash $bash_path/get_realm_link.sh | \
+parallel bash $bash_path/link_converter.sh | \
+parallel -j20 bash $bash_path/auc_getter.sh | \
+parallel bash $bash_path/auc_converter.sh | \
+parallel bash $bash_path/auc_filterer.sh | \
+parallel -j1 bash $bash_path/results_merger.sh
 
-  echo -n "  Converting to lua... "
-  lua_link_file=$(get_converted_name $json_link_file)
-  convert $json_link_file $lua_link_file
-  echo "done"
-
-  url_and_name=($(lua suggest_filename.lua $lua_link_file))
-  auc_url=${url_and_name[0]}
-  json_auc_name=$(get_json_name ${url_and_name[1]})
-  echo -n "  Getting actual auction data... "
-  if [[ -e $json_auc_name ]]
-  then
-    echo "already done"
-  else
-    retrieve $auc_url $json_auc_name
-    echo "done"
-  fi
-
-  echo -n "  Converting to lua... "
-  lua_auc_name=$(get_converted_name $json_auc_name)
-  if [[ -e $lua_auc_name ]]
-  then
-    echo "already done"
-  else
-    convert $json_auc_name $lua_auc_name
-    echo "done"
-  fi
-
-  echo -n "  Filtering... "
-  lua_filtered_auc_name=$(get_filtered_name $lua_auc_name)
-  if [[ -e $lua_filtered_auc_name ]]
-  then
-    echo "already done"
-  else
-    lua filter_auctions.lua $lua_auc_name $lua_filtered_auc_name
-    echo "done"
-  fi
-
-  echo -n "  Processing... "
-  lua auc_extreme_pet_prices.lua \
-    $lua_filtered_auc_name $config_lua $species_map $results_lua > $results_tmp
-  if [[ -s $results_tmp ]]
-  then
-    cat $results_tmp > $results_lua
-  fi
-  echo "done"
-done
-rm --force $results_tmp
 echo "Results are in '$results_lua'"
 
 # cd ./lua

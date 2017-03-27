@@ -368,6 +368,6 @@ local pets =
 
 return
   {
-    realms = require('all_realms'),
+    realms = realms, --require('all_realms'),
     pets = pets,
   }
