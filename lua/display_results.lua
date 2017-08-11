@@ -62,6 +62,7 @@ local column_is_number = {}
 for i = 1, #results do
   for j = 1, #results[i] do
     local cur_width = #(tostring(results[i][j] or ''))
+    cur_width = math.min(cur_width, 50)
     if
       not max_column_width[j] or
       (cur_width > max_column_width[j])
