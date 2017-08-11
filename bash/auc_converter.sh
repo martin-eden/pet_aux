@@ -8,7 +8,7 @@ function get_processed_name
   echo $data_path/auc_converter/processed/$(basename $1)
 }
 
-if [[ ! -e $1 ]]
+if [[ ! -s $1 ]]
 then
   exit
 fi
