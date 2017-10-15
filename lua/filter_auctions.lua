@@ -50,6 +50,11 @@ local table_to_str = request('!.formats.lua_table.save')
 
 local auc_str = file_as_string(auc_input_file)
 local data = table_from_str(auc_str)
+
+if not data or not next(data) then
+  return
+end
+
 data = filter(data)
 local filtered_str = table_to_str(data)
 

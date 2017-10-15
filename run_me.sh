@@ -128,15 +128,33 @@ export results_lua="$home_dir/results.lua"
 export config_lua="$home_dir/config.lua"
 echo "{}" > $results_lua
 
-echo "Parallel loading and processing auctions."
+## Donwload link files to auctions
+realms_to_process=$(lua print_realm_slugs_from_config.lua $config_lua $realms_map)
+num_realms=$(echo "$realms_to_process" | wc -l)
+echo -n "Getting links to $num_realms realm auctions... "
+link_files=$(parallel -j500 bash $bash_path/get_realm_link.sh ::: $realms_to_process)
+echo "done"
+# echo "$link_files"
 
-lua print_realm_slugs_from_config.lua $config_lua $realms_map | \
-parallel -j50 bash $bash_path/get_realm_link.sh | \
-parallel bash $bash_path/link_converter.sh | \
-parallel -j20 bash $bash_path/auc_getter.sh | \
-parallel bash $bash_path/auc_converter.sh | \
-parallel bash $bash_path/auc_filterer.sh | \
-parallel -j1 bash $bash_path/results_merger.sh
+## Convert .json link file to .lua
+echo -n "Parsing links... "
+parsed_links=$(parallel bash $bash_path/link_converter.sh ::: $link_files)
+echo "done"
+# echo "$parsed_links"
+
+echo -n "Downloading $num_realms auctions... "
+auc_files=$(parallel -j40 --progress bash $bash_path/auc_getter.sh ::: $parsed_links)
+echo "done"
+
+echo -n "Processing auctions... "
+lua_auc_files_raw=$(parallel --progress bash $bash_path/auc_converter.sh ::: $auc_files)
+lua_auc_files=$(parallel --progress bash $bash_path/auc_filterer.sh ::: $lua_auc_files_raw)
+echo "done"
+# echo "$lua_auc_files"
+
+echo -n "Merging results... "
+parallel -j1 bash $bash_path/results_merger.sh ::: $lua_auc_files
+echo "done"
 
 echo "Results are in '$results_lua'"
 

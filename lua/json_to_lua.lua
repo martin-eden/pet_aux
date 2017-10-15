@@ -19,6 +19,7 @@ local table_to_str = request('!.formats.lua_table.save')
 
 local json_str = file_as_string(json_input_file)
 local data = parse_json(json_str)
+data = data or {}
 local lua_str = table_to_str(data)
 local f_out = assert(io.open(lua_output_file, 'w'))
 f_out:write(lua_str)
