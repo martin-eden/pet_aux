@@ -58,6 +58,7 @@ function retrieve
 }
 
 ## Get realms
+
 echo -n "Getting realms list... "
 realms_json=$(get_json_name realms.json)
 if [[ -e $realms_json ]]
@@ -122,13 +123,14 @@ else
   echo "done"
 fi
 
-
 ## Get auctions and extract species
+
 export results_lua="$home_dir/results.lua"
 export config_lua="$home_dir/config.lua"
 echo "{}" > $results_lua
 
 ## Donwload link files to auctions
+
 realms_to_process=$(lua print_realm_slugs_from_config.lua $config_lua $realms_map)
 num_realms=$(echo "$realms_to_process" | wc -l)
 echo -n "Getting links to $num_realms realm auctions... "
@@ -137,6 +139,7 @@ echo "done"
 # echo "$link_files"
 
 ## Convert .json link file to .lua
+
 echo -n "Parsing links... "
 parsed_links=$(parallel bash $bash_path/link_converter.sh ::: $link_files)
 echo "done"
