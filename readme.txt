@@ -1,3 +1,15 @@
+Does not work in 2019!
+
+Sorry guys, Blizz now requires passport to obtain AuthID. Fuck them.
+
+I'll keep code locally for tinkering but this repository will be
+deleted: 
+  * I can't test it's current functionality
+  * my account was BANNED FOREWER in WoW. Feels like medal of honour.
+  * I'm tired of WoW. I've tried and saw a lot of thinkgs while I
+    was playing 2009/2015
+
+--
 This is project from the "gray zone" of World of Warcraft.
 It downloads current auction snapshots for given realms and
 finds minimal prices for given pets on realm. (1)
