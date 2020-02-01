@@ -1,13 +1,11 @@
-Does not work in 2019!
+Does not work since 2019!
 
 Sorry guys, Blizz now requires passport to obtain AuthID. Fuck them.
 
-I'll keep code locally for tinkering but this repository will be
-deleted: 
+I'm archiving this repository due following reasons:
   * I can't test it's current functionality
-  * my account was BANNED FOREWER in WoW. Feels like medal of honour.
-  * I'm tired of WoW. I've tried and saw a lot of thinkgs while I
-    was playing 2009/2015
+  * My account is BANNED FOREWER in WoW. Feels like medal of honour.
+  * I'm tired of WoW. I played it a lot from 2009 till 2015.
 
 --
 This is project from the "gray zone" of World of Warcraft.
